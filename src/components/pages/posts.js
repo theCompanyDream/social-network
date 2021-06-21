@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import {Row, Col} from 'react-bootstrap'
+
+import { SocialContext } from '../'
 
 const Posts = () => {
-	return ( 
-		<div>
 
-		</div>
+	const context = useContext(SocialContext)
+
+	return ( 
+		<Row>
+			<Col></Col>
+		</Row>
 	)
 }
  

@@ -1,7 +1,8 @@
 import { createContext } from 'react'
 
-const SocialContexnt = createContext({
-	
+const SocialContext = createContext({
+	posts: [],
+	comments: []
 })
 
-export default SocialContexnt
+export default SocialContext
