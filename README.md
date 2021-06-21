@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# AutoFi Feed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You are working on a new feed to promote the company social network activity, you are
+provided with access to the account’s posts and comments, your job is to integrate that activity
+into the website.
 
-## Available Scripts
+## Task
 
-In the project directory, you can run:
+Build a ReactJS project that fetches from the posts and comments APIs, presents a list of
+posts and when any of the items is clicked show the list of comments that are associated with
+that specific post.
+
+You are responsible for:
+
+- Fetching the data from the API.
+- Presenting the data in the view.
+- Relate comments to posts.
+Stretch goals
+- Set up project to use redux
+- Test your components
+- Allow the user to comment on a post and save the comment on state/redux.
+Document any assumptions and design decisions you have made.
+[Posts API:](https://jsonplaceholder.typicode.com/posts)
+[Comments API:](https://jsonplaceholder.typicode.com/comments)
+
+## App Info
+
+### Dependencies
+
+- Node14.4.0
+- React
 
 ### `yarn start`
 
@@ -38,33 +62,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
