@@ -3,14 +3,17 @@ import {Row, Col, Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/posts.css'
 
-import { SocialContext } from '../'
+import { SocialContext } from '..'
 
-const Posts = () => {
+const Feed = () => {
 
 	const context = useContext(SocialContext)
 
 	return ( 
 		<Row>
+			<Col>
+				
+			</Col>
 			<Col>
 				<ul>
 					{context.posts && context.posts.map(post => (
@@ -29,8 +32,11 @@ const Posts = () => {
 					))}
 				</ul>
 			</Col>
+
+			<Col>
+			</Col>
 		</Row>
 	)
 }
  
-export default Posts
+export default Feed

@@ -5,16 +5,18 @@ import './components/styles/App.css';
 
 import { Layout, SocialContext } from './components'
 
-const Posts = React.lazy(() => import('./components/pages/posts'))
-const Comments =  React.lazy(() => import('./components/pages/comments'))
+const Feed = React.lazy(() => import('./components/pages/feed'))
+const Post =  React.lazy(() => import('./components/pages/post'))
 
 const App = () => {
 
-  const [body, setState] = useState({})
+  const [body, setState] = useState({loading: true})
   
   useLayoutEffect(() => {
 
     async function fetch_feed() {
+
+      // Avoid Contstant reloads
       const [posts_resp, comments_resp] = await Promise.all([
         fetch(`https://jsonplaceholder.typicode.com/posts`),
         fetch(`https://jsonplaceholder.typicode.com/comments`)
@@ -27,7 +29,7 @@ const App = () => {
     }
 
     fetch_feed().then(([posts, comments]) => {
-      setState({posts: posts, comments: comments})
+      setState({posts: posts, comments: comments, loading: false})
     })
 
   }, [body])
@@ -36,8 +38,8 @@ const App = () => {
     <SocialContext.Provider value={body}>
       <Layout>
         <Suspense fallback={<div>Loading ...</div>}>
-          <Route exact path="/" component={Posts} />
-          <Route exact path="/comments" component={Comments} />
+          <Route exact path="/" component={Feed} />
+          <Route exact path="/post" component={Post} />
         </Suspense>
       </Layout>
     </SocialContext.Provider>
