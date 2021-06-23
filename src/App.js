@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useLayoutEffect } from 'react';
+import React, { useState, Suspense,  useLayoutEffect } from 'react';
 import { Route } from "react-router-dom"
 
 import './components/styles/App.css';
@@ -14,21 +14,23 @@ const App = () => {
   
   useLayoutEffect(() => {
 
-    const fetchPosts = async () => {
-      await fetch(`https://jsonplaceholder.typicode.com/posts`)
-        .then(res => res.json())
-        .then(data => setState({...body, posts: data}))
+    async function fetch_feed() {
+      const [posts_resp, comments_resp] = await Promise.all([
+        fetch(`https://jsonplaceholder.typicode.com/posts`),
+        fetch(`https://jsonplaceholder.typicode.com/comments`)
+      ])
+
+      const posts = await posts_resp.json()
+      const comments = await comments_resp.json()
+
+      return [posts, comments]
     }
 
-    const fetchComments = async () => {
-      await fetch(`https://jsonplaceholder.typicode.com/comments`)
-        .then(res => res.json())
-        .then(data => setState({...body, comments: data}))
-    }
+    fetch_feed().then(([posts, comments]) => {
+      setState({posts: posts, comments: comments})
+    })
 
-    fetchPosts()
-    fetchComments()
-  }, [body, setState])
+  }, [body])
 
   return (
     <SocialContext.Provider value={body}>

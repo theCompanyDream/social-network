@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import {Row, Col, Card} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import '../styles/posts.css'
 
 import { SocialContext } from '../'
@@ -11,13 +12,10 @@ const Posts = () => {
 	return ( 
 		<Row>
 			<Col>
-				<h1 className="display-2">Social Network</h1>
-			</Col>
-			<Col>
 				<ul>
 					{context.posts && context.posts.map(post => (
-						<li>
-							<a>
+						<li key={post.id}>
+							<Link to={`/comments?id=${post.id}`}>
 								<Row>
 									<Card>
 										<Card.Body>
@@ -26,7 +24,7 @@ const Posts = () => {
 										</Card.Body>
 									</Card>
 								</Row>
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
