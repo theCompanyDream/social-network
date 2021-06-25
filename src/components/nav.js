@@ -7,7 +7,7 @@ const Header = () => {
 		<header>
 			<Navbar bg="dark" variant="dark">
 
-				<Navbar.Brand href="#home">Social Network</Navbar.Brand>
+				<Navbar.Brand href="/">Social Network</Navbar.Brand>
 
 			</Navbar>
 		</header>

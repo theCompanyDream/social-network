@@ -10,7 +10,7 @@ const Post =  React.lazy(() => import('./components/pages/post'))
 
 const App = () => {
 
-  const [body, setState] = useState({loading: true})
+  const [body, setState] = useState({})
   
   useLayoutEffect(() => {
 
@@ -29,7 +29,7 @@ const App = () => {
     }
 
     fetch_feed().then(([posts, comments]) => {
-      setState({posts: posts, comments: comments, loading: false})
+      setState({posts: posts, comments: comments})
     })
 
   }, [body])
@@ -39,7 +39,7 @@ const App = () => {
       <Layout>
         <Suspense fallback={<div>Loading ...</div>}>
           <Route exact path="/" component={Feed} />
-          <Route exact path="/post" component={Post} />
+          <Route exact path="/post/:id" component={Post} />
         </Suspense>
       </Layout>
     </SocialContext.Provider>
