@@ -15,7 +15,7 @@ const Post = () => {
 		if (context.posts) {
 			const post = context.posts.find(post => post.id == id);
 			const comments =  context.comments.filter((comment) => {
-				return comment.id == id
+				return comment.id === id
 			})
 			console.log(post);
 			setPage({post: post, comments: comments})
