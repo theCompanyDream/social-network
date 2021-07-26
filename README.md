@@ -1,27 +1,8 @@
-# AutoFi Feed
+# Social Network
 
-You are working on a new feed to promote the company social network activity, you are
-provided with access to the account’s posts and comments, your job is to integrate that activity
-into the website.
+An example of how to design a social network.
 
-## Tasks
-
-- Fetching the data from the API.
-- Presenting the data in the view.
-- Relate comments to posts.
-
-## Stretch Goals
-
-- Set up project to use redux react hooks.
-- Test your components
-- Allow the user to comment on a post and save the comment on state/redux.
-Document any assumptions and design decisions you have made.
-[Posts API:](https://jsonplaceholder.typicode.com/posts)
-[Comments API:](https://jsonplaceholder.typicode.com/comments)
-
-## App Info
-
-### Dependencies
+## Dependencies
 
 - Node14.4.0
 - React
