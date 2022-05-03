@@ -17,7 +17,7 @@ const Feed = () => {
 				<ButtonGroup className=" gap-2" vertical>
 					<Button variant="outline-success" size="lg">Profile</Button>
 					<Button variant="outline-success" size="lg">Notifications</Button>
-					<Button variant="outline-success" size="lg" href="https://tbrantleyii.me'" >Profile</Button>
+					<Button variant="outline-success" size="lg" href="https://tbrantleyii.me" >Profile</Button>
 					<Button variant="outline-success" size="lg">Settings</Button>
 				</ButtonGroup>
 			</Col>
