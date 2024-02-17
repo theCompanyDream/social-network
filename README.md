@@ -4,7 +4,7 @@ An example of how to design a social network.
 
 ## Dependencies
 
-- Node14.4.0
+- Node16.4.0
 - React
 
 ### Run Server
